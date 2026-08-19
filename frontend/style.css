@@ -1,0 +1,136 @@
+:root {
+    --night: #0B1B2B;
+    --dusk: #1B3A5C;
+    --sky: #4A7BA6;
+    --sun: #F2A93B;
+    --cloud: #F5F7FA;
+    --muted: #93AAC0;
+    --line: rgba(245, 247, 250, 0.14);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+body {
+    background: linear-gradient(180deg, var(--night) 0%, var(--dusk) 60%, var(--sky) 100%);
+    min-height: 100vh;
+    font-family: 'Inter', sans-serif;
+    color: var(--cloud);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+}
+
+.card {
+    width: 100%;
+    max-width: 380px;
+    background: rgba(11, 27, 43, 0.45);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    padding: 32px 28px;
+    backdrop-filter: blur(6px);
+}
+
+.eyebrow {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--sun);
+    margin: 0 0 8px;
+}
+
+h1 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 600;
+    font-size: 24px;
+    margin: 0 0 28px;
+}
+
+.campos {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.campo {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.campo-pequeno {
+    flex: 0 0 64px;
+}
+
+label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--muted);
+}
+
+input {
+    background: rgba(245, 247, 250, 0.06);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    color: var(--cloud);
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    padding: 10px 12px;
+    outline: none;
+    width: 100%;
+}
+
+input:focus {
+    border-color: var(--sun);
+}
+
+button {
+    width: 100%;
+    background: var(--sun);
+    color: var(--night);
+    border: none;
+    border-radius: 8px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    padding: 12px;
+    cursor: pointer;
+    transition: opacity 0.15s ease;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+.resultado {
+    margin-top: 24px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+    color: var(--muted);
+    min-height: 20px;
+    white-space: pre-wrap;
+    line-height: 1.9;
+}
+
+.resultado strong {
+    color: var(--cloud);
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 600;
+}
+
+.resultado .erro {
+    color: #E8746A;
+}

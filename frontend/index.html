@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste Clima</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400..700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="card">
+
+        <p class="eyebrow">Teste de integração</p>
+        <h1>Consultar clima</h1>
+
+        <div class="campos">
+            <div class="campo">
+                <label for="cidade">Cidade</label>
+                <input id="cidade" value="São Paulo">
+            </div>
+            <div class="campo campo-pequeno">
+                <label for="estado">UF</label>
+                <input id="estado" value="SP">
+            </div>
+            <div class="campo campo-pequeno">
+                <label for="pais">País</label>
+                <input id="pais" value="BR">
+            </div>
+        </div>
+
+        <button onclick="buscarClima()">Buscar clima</button>
+
+        <div id="resultado" class="resultado"></div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
